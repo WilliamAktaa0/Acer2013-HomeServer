@@ -1,6 +1,5 @@
 # 2013 Acer Aspire E1-571G HomeServer:
-## Model:
-Acer Aspire E1-571G (V2.14)
+
 ## Specs:
 Intel Core(R) Core i5-3230M (4) @3.20 Ghz and Intel 3rd Gen Core processor Graphics Controller @1.10GHz (integrated).
 NVIDIA GeForce 610M/710M/810M/820M / GT 620M 625M / 630M / 720M (Discrete).

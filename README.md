@@ -8,7 +8,7 @@ NVIDIA GeForce 610M/710M/810M/820M / GT 620M 625M / 630M / 720M (Discrete).
 Debian 13.6.0 amd64 netinst and docker containers to run each service in.
 
 
-## Main Goals:x
+## Main Goals:
 #### PS: I Might add or remove goals along the process. However until I have a functional homeserver, I will live update this repo and readme. 
 #### Some of these might require an addition ssd/nvme as well as more RAM, so I will most probably upgrade the machine along the way.
 ### Pi Hole:

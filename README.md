@@ -27,17 +27,25 @@ A local, web-based file-sharing tool inspired by Apple’s AirDrop that lets you
 
 ## OS Install:
 After flashing the debian iso from debian.org on the USB flash/thumb drive and booting into the graphical install, 
-1- Select your language of choice
-2- Choose your primary network interface for the install. For a homeserver, wired Ethernet is highly recommended. However if you aren't close to one, you can use wireless internet temporarily for the install.
-4- For hostname, I'm going to name it "homeserver", but you can choose whatever you want.
-5- For domainname, leave it blank or just enter "local" or "home".
-6- Enter root password. (You will need this to run commands that require administrative (sudo) privileges.
-7- Enter full name, username, and add a password
-8- Partitioning:
+### 1- Language
+Select your language of choice
+### 2- network connectivity 
+Choose your primary network interface for the install. For a homeserver, wired Ethernet is highly recommended. However if you aren't close to one, you can use wireless internet temporarily for the install.
+### 3- host&domain name
+For hostname, I'm going to name it "homeserver", but you can choose whatever you want.
+For domainname, leave it blank or just enter "local" or "home".
+### 4- login
+Enter root password. (You will need this to run commands that require administrative (sudo) privileges.
+Enter full name, username, and add a password
+### 5- Partitioning:
+#### Use Entire Disk & LVM:
 There are multiple options for partitioning the disk. I ended up choosing "Guided - use entire disk and set up LVM" because it wipes the drive and sets up a flexible, virtual storage pool. It also allows partitions to be resized dynamically or expanded across new physical drives later.
+#### Writing changes to disk
 Make sure to select the hard drive for partitioning not the thumb drive and then select "All files in one partition (recommended for new users)", and finally write the current partitioning scheme to disk, then select yes twice to finish write changes to disk.
-If Error: "No root file system is define. Please correct this from the partitioning menu", then you might has accidentally press enter again after selecting yes to write changes to disk the first time causing you to select no the second time. Go back and redo. 
+#### If Error: "No root file system is define. Please correct this from the partitioning menu"
+then you might has accidentally press enter again after selecting yes to write changes to disk the first time causing you to select no the second time. Go back and redo. 
 Select enter to the amount of volume group to use for guided partitioning. Now select "Finish Partitioning" and finally, select yes to write changes to disks. 
+#### Writing changes to disk (fr) 
 At this point, it should start writing to the disk. Wait like 5 minutes and you will be taken to the next installation steps:
-9- Configure the package manager. The goal is to find a mirror of the Debian archive that is close to you on the network - be aware that nearby countries, or even your own, may not be the best choice. In my case, I choose to enter information manually and go with the Debian Global CDM.
-10- 
+### 6- Configuring the package manager. 
+The goal is to find a mirror of the Debian archive that is close to you on the network - be aware that nearby countries, or even your own, may not be the best choice. In my case, I choose to go with the German mirror ftp.de.debian.org. Now, wait for debian to select and install software.

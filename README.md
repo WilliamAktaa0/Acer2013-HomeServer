@@ -8,7 +8,7 @@ NVIDIA GeForce 610M/710M/810M/820M / GT 620M 625M / 630M / 720M (Discrete).
 Debian 13.6.0 amd64 netinst and docker containers to run each service in.
 
 
-## Main Goals:
+## Main Goals
 #### PS: I Might add or remove goals along the process. However until I have a functional homeserver, I will live update this repo and readme. 
 #### Some of these might require an addition ssd/nvme as well as more RAM, so I will most probably upgrade the machine along the way.
 ### Pi Hole:
@@ -47,10 +47,13 @@ Make sure to select the hard drive for partitioning not the thumb drive and then
 #### If Error: "No root file system is define. Please correct this from the partitioning menu"
 then you might has accidentally press enter again after selecting yes to write changes to disk the first time causing you to select no the second time. Go back and redo. 
 Select enter to the amount of volume group to use for guided partitioning. Now select "Finish Partitioning" and finally, select yes to write changes to disks. 
-#### Writing changes to disk (fr) 
+#### Writing changes to disk (fr):
 At this point, it should start writing to the disk. Wait like 5 minutes and you will be taken to the next installation steps:
 ### 6- Configuring the package manager. 
 The goal is to find a mirror of the Debian archive that is close to you on the network - be aware that nearby countries, or even your own, may not be the best choice. In my case, I choose to go with the German mirror ftp.de.debian.org. Wait for debian to install core system.
 ### 7- Software Selection:
 To keep this as lightweight and minimal as possible, we will keep standard system utils ticked, tick "SSH server", and untick "Debian desktop environment" and any desktop environment, which leaves us with just the standard system utilities and SSH server ticked. 
-
+### 8- Grub:
+Since we wiped the drive during paritioning, it should be safe to install grub. Select yes to do so and wait for the installation to finish.
+### 9- Boot:
+After installation, your system should reboot. After, simply enter os through the grub selection menu by simply pressing enter and you should be greeted by cli. Congrats, you just installed Debian. Simply enter username and password and you are in.

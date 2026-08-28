@@ -9,8 +9,7 @@ Debian 13.6.0 amd64 netinst and docker containers to run each service in.
 
 
 ## Main Goals:
-#### PS: I Might add or remove goals along the process. However until I have a functional homeserver, I will live update this repo and readme. 
-#### Some of these might require an addition ssd/nvme as well as more RAM, so I will most probably upgrade the machine along the way.
+#### PS: Some of these require an addition ssd/nvme as well as more RAM, so I will most probably upgrade the machine along the way.
 ### Pi Hole:
 A network-wide ad blocker and privacy tool that acts as a Domain Name System (DNS) sinkhole for all devices connected to your home network.
 ### Retro web page:

@@ -63,12 +63,28 @@ After installation, your system should reboot. After, simply enter os through th
 and enter root password
 ### Update Apt and Install Sudo:
     apt update && apt install sudo -y
-### Give Your Account Sudo Privileges 
-    usermod -aG sudo yourusername
-### Apply changes:
+### Add Yourself to the Sudoers File
+    sudo usermod -aG sudo username
+(replace "username" with your actual username)
+### Exit and Apply changes:
     exit
-## Install:
-### Pihole:
-    sudo apt update && sudo apt upgrade -y
-    sudo apt install curl -y
-    curl -sSL https://install.pi-hole.net | bash
+    newgrp sudo
+### Disable the Laptop Lid Sleep
+ Open the login config file:
+    `sudo nano /etc/systemd/logind.conf'
+  `Find "#HandleLidSwitch=suspend" and delete the "#". Finally, Ctrl+O to write changes to file and Ctrl+X to exit.
+  
+  After, Restart the systemd service to apply the changes:
+    `sudo systemctl restart systemd-logind`
+
+## Set Up the Directory Structure
+I plan to keep my data organized to prepare for future ssd upgrades, so I'm going to create a dedicated folder for each software service:
+    ### Pi hole:
+        `mkdir -p ~/homeserver/pihole/config ~/homeserver/pihole/dnsmasq.d`
+        `cd ~/homeserver/pihole`
+
+## 3. Create the Docker Compose File
+Before creating the file, you need to make sure Debian's built in stub listener isn't blocking port 53 (port for DNS) beacause that is the same port pihole uses, which causes them to conflict. This command disables it :
+    `sudo systemctl stop systemd-resolved`
+    `sudo systemctl disable systemd-resolved`
+    

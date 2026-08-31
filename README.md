@@ -57,3 +57,18 @@ To keep this as lightweight and minimal as possible, we will keep standard syste
 Since we wiped the drive during paritioning, it should be safe to install grub. Select yes to do so and wait for the installation to finish.
 ### 9- Boot:
 After installation, your system should reboot. After, simply enter os through the grub selection menu by simply pressing enter and you should be greeted by cli. Congrats, you just installed Debian. Simply enter username and password and you are in.
+## Setup:
+### Login to Root User 
+    su -
+and enter root password
+### Update Apt and Install Sudo:
+    apt update && apt install sudo -y
+### Give Your Account Sudo Privileges 
+    usermod -aG sudo yourusername
+### Apply changes:
+    exit
+## Install:
+### Pihole:
+    sudo apt update && sudo apt upgrade -y
+    sudo apt install curl -y
+    curl -sSL https://install.pi-hole.net | bash

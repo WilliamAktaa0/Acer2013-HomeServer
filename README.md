@@ -72,7 +72,7 @@ and enter root password
 ### Disable the Laptop Lid Sleep
  Open the login config file:
     `sudo nano /etc/systemd/logind.conf'
-  `Find "#HandleLidSwitch=suspend" and delete the "#". Finally, Ctrl+O to write changes to file and Ctrl+X to exit.
+  `Find `#HandleLidSwitch=suspend` and delete the "#". Finally, Ctrl+O to write changes to file and Ctrl+X to exit.
   
   After, Restart the systemd service to apply the changes:
     `sudo systemctl restart systemd-logind`

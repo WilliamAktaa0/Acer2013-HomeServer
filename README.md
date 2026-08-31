@@ -77,14 +77,14 @@ and enter root password
   After, Restart the systemd service to apply the changes:
     `sudo systemctl restart systemd-logind`
 
-## Set Up the Directory Structure
+## Directory Structure
 I plan to keep my data organized to prepare for future ssd upgrades, so I'm going to create a dedicated folder for each software service:
 ### Pi hole:
     mkdir -p ~/homeserver/pihole/config ~/homeserver/pihole/dnsmasq.d
     cd ~/homeserver/pihole
 
 ## 3. Create the Docker Compose File
-Before creating the file, you need to make sure Debian's built in stub listener isn't blocking port 53 (port for DNS) beacause that is the same port pihole uses, which causes them to conflict. This command disables it :
+Before creating the file, you need to make sure Debian's built in stub listener isn't blocking port 53 (port for DNS) beacause that is the same port pihole uses, which causes them to conflict. This command disables it:
     `sudo systemctl stop systemd-resolved`
     `sudo systemctl disable systemd-resolved`
     

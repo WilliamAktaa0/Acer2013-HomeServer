@@ -79,9 +79,9 @@ and enter root password
 
 ## Set Up the Directory Structure
 I plan to keep my data organized to prepare for future ssd upgrades, so I'm going to create a dedicated folder for each software service:
-    ### Pi hole:
-        `mkdir -p ~/homeserver/pihole/config ~/homeserver/pihole/dnsmasq.d`
-        `cd ~/homeserver/pihole`
+### Pi hole:
+    mkdir -p ~/homeserver/pihole/config ~/homeserver/pihole/dnsmasq.d
+    cd ~/homeserver/pihole
 
 ## 3. Create the Docker Compose File
 Before creating the file, you need to make sure Debian's built in stub listener isn't blocking port 53 (port for DNS) beacause that is the same port pihole uses, which causes them to conflict. This command disables it :

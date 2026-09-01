@@ -11,11 +11,11 @@ Debian 13.6.0 amd64 netinst and docker containers to run each service in.
 ## Main Goals
 #### PS: I Might add or remove goals along the process. However until I have a functional homeserver, I will live update this repo and readme. 
 #### Some of these might require an addition ssd/nvme as well as more RAM, so I will most probably upgrade the machine along the way.
-### Pi Hole:
+### PiHole:
 A network-wide ad blocker and privacy tool that acts as a Domain Name System (DNS) sinkhole for all devices connected to your home network.
-### Jelly Fin:
+### JellyFin:
 A volunteer-built media solution that allows you to stream to any device from the *totally legal license bought* media collection you have on your server. 
-### Retro web page:
+### Retro webpage:
 Retro web page or community platform reminiscent of the early 1990s and early 2000s days of the internet before corporate takeover.
 ### Miniflux:
 a minimalist, open-source, and self-hosted RSS and Atom feed reader designed for speed, simplicity, and distraction-free reading.

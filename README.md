@@ -91,7 +91,7 @@ Note: Make sure you are in the previously created Pihole directory. Should look 
 The easiest way to get up and running with Pi-hole on Docker is to use the official quick-start docker-compose.yml template:
 
  ```dockerfile
-```# More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
+# More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
 services:
   pihole:
     container_name: pihole
@@ -131,5 +131,5 @@ services:
       # Optional, if Pi-hole should get some more processing time
       - SYS_NICE
     restart: unless-stopped
-
-Run docker compose up -d to build and start Pi-hole (on older systems, the syntax here may be docker-compose up -d)  ```
+``` 
+Run docker compose up -d to build and start Pi-hole (on older systems, the syntax here may be docker-compose up -d)  

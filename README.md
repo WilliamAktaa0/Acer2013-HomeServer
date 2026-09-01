@@ -83,8 +83,8 @@ I plan to keep my data organized to prepare for future ssd upgrades, so I'm goin
     mkdir -p ~/homeserver/pihole/config ~/homeserver/pihole/dnsmasq.d
     cd ~/homeserver/pihole
 
-## 3. Create the Docker Compose File
-Before creating the file, you need to make sure Debian's built in stub listener isn't blocking port 53 (port for DNS) beacause that is the same port pihole uses, which causes them to conflict. This command disables it:
-    `sudo systemctl stop systemd-resolved`
-    `sudo systemctl disable systemd-resolved`
-    
+## Create the Docker Compose File Inside /homeserver/pihole:
+    nano pihole.yaml
+Note: Make sure you are in the previously created Pihole directory. Should look like this:
+ `yourusername@homeserver:~/homeserver/pihole$: nano pihole.yaml`
+
